@@ -1,0 +1,28 @@
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.deps.json
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.runtimeconfig.json
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.runtimeconfig.dev.json
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.dll
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.pdb
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.DAL.dll
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.DAL.pdb
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.AssemblyInfoInputs.cache
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.AssemblyInfo.cs
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.csproj.CopyComplete
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.dll
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.pdb
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.deps.json
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.runtimeconfig.json
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.runtimeconfig.dev.json
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.dll
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.pdb
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.DAL.dll
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\bin\Debug\netcoreapp2.0\ITI.PrimarySchool.DAL.pdb
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.AssemblyInfo.cs
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.csproj.CopyComplete
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.dll
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.WebApp\obj\Debug\netcoreapp2.0\ITI.PrimarySchool.WebApp.pdb

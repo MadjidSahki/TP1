@@ -1,0 +1,18 @@
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\bin\Debug\netstandard1.3\ITI.PrimarySchool.DAL.deps.json
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\bin\Debug\netstandard1.3\ITI.PrimarySchool.DAL.dll
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\bin\Debug\netstandard1.3\ITI.PrimarySchool.DAL.pdb
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.csprojResolveAssemblyReference.cache
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.csproj.CoreCompileInputs.cache
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.AssemblyInfoInputs.cache
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.AssemblyInfo.cs
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.dll
+C:\Users\thiba\Desktop\SQL S4\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.pdb
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\bin\Debug\netstandard1.3\ITI.PrimarySchool.DAL.deps.json
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\bin\Debug\netstandard1.3\ITI.PrimarySchool.DAL.dll
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\bin\Debug\netstandard1.3\ITI.PrimarySchool.DAL.pdb
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.AssemblyInfo.cs
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.dll
+C:\Users\user\Desktop\partir à partir de là\ctrl\NetCoreSample\src\ITI.PrimarySchool.DAL\obj\Debug\netstandard1.3\ITI.PrimarySchool.DAL.pdb
