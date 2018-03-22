@@ -40,11 +40,11 @@
 
             try {
                 this.model = await this.executeAsyncRequest(() => StudentApiService.getStudentAssignedClassAsync(this.studentId));
-                
+                this.availableClasses = await this.executeAsyncRequest(() => ClassApiService.getClassListAsync());
 
-                if(this.model.classId > 0) this.availableClasses.push(this.model);
             }
             catch(e) {
+                console.error(e);
                 return this.redirectToList();
             }
         },

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using ITI.PrimarySchool.DAL;
 using ITI.PrimarySchool.WebApp.Authentication;
+using ITI.PrimarySchool.WebApp.Models.StudentViewModels;
 using ITI.PrimarySchool.WebApp.Models.TeacherViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

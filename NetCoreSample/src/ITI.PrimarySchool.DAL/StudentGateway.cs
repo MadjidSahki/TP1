@@ -26,8 +26,9 @@ namespace ITI.PrimarySchool.DAL
                              s.FirstName,
                              s.LastName,
                              s.BirthDate,
-                             s.GitHubLogin
-                      from iti.vStudent s;" );
+                             s.ClassName,
+                             s.GitHubLogin                  
+                      from iti.vStudent s;");
             }
         }
 
@@ -40,6 +41,7 @@ namespace ITI.PrimarySchool.DAL
                              s.FirstName,
                              s.LastName,
                              s.BirthDate,
+                             s.ClassName,
                              s.GitHubLogin
                       from iti.vStudent s
                       where s.StudentId = @StudentId;",
@@ -58,6 +60,7 @@ namespace ITI.PrimarySchool.DAL
                     @"select s.StudentId,
                              s.FirstName,
                              s.LastName,
+                             s.ClassName,
                              s.BirthDate,
                              s.ClassId
                       from iti.vStudent s
@@ -76,7 +79,9 @@ namespace ITI.PrimarySchool.DAL
                 return await con.QueryAsync<FollowedStudentData>(
                     @"select s.StudentId,
                              s.FirstName,
+                             s.ClassName,
                              s.LastName,
+                             s.ClassName,
                              s.GitHubLogin
                         from iti.vStudent s
                         where s.GitHubLogin in @Logins;",

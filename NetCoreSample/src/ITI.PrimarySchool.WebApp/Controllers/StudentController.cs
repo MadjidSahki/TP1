@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using ITI.PrimarySchool.DAL;
 using ITI.PrimarySchool.WebApp.Authentication;
 using ITI.PrimarySchool.WebApp.Models.StudentViewModels;
+using ITI.PrimarySchool.WebApp.Models.TeacherViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +16,10 @@ namespace ITI.PrimarySchool.WebApp.Controllers
         readonly StudentGateway _studentGateway;
         readonly ClassGateway _classGateway;
 
-        public StudentController( StudentGateway studentGateway )
+        public StudentController( StudentGateway studentGateway, ClassGateway classGateway )
         {
             _studentGateway = studentGateway;
+            _classGateway = classGateway;
         }
 
         [HttpGet]
@@ -58,5 +60,21 @@ namespace ITI.PrimarySchool.WebApp.Controllers
             Result result = await _studentGateway.Delete( id );
             return this.CreateResult( result );
         }
+
+        [HttpPost("{id}/assignClass")]
+        public async Task<IActionResult> AssignClass(int id, [FromBody] AssignedClassViewModels model)
+        {
+            Result result = await _studentGateway.AssignClass(id, model.ClassId);
+            return this.CreateResult(result);
+        }
+
+        [HttpGet("{id}/assignedClass")]
+        public async Task<IActionResult> AssignedClass(int id)
+        {
+            Result<AssignedClassData> result = await _classGateway.AssignedStudentClass(id);
+            return this.CreateResult(result);
+        }
+
+
     }
 }

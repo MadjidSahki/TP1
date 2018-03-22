@@ -11,6 +11,9 @@ class ClassApiService {
         return await getAsync(endpoint);
     }
 
+  /*  async getClassesWithoutStudentAsync(){
+        return await getAsync(`${endpoint}/NotAssigned`);
+    }*/
     async getClassesWithoutTeacherAsync() {
         return await getAsync(`${endpoint}/NotAssigned`);
     }

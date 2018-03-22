@@ -143,6 +143,18 @@ namespace ITI.PrimarySchool.DAL
             }
         }
 
+        public async Task<Result<AssignedClassData>> AssignedStudentClass(int studentId)
+        {
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                AssignedClassData classData = await con.QueryFirstOrDefaultAsync<AssignedClassData>(
+                     @"select c.ClassId, c.[Name] from iti.vStudentClass c where c.StudentId = @StudentId;",
+                     new { StudentId = studentId });
+                if (classData == null) return Result.Failure<AssignedClassData>(Status.BadRequest, "Unknow student.");
+                return Result.Success(classData);
+            }
+
+        }
 
         bool IsNameValid( string name ) => !string.IsNullOrWhiteSpace( name );
 
