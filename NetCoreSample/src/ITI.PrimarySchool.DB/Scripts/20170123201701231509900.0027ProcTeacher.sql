@@ -1,4 +1,4 @@
-create proc iti.sTeacherUpdate
+create proc iti.sTeacherUpdate2
 (
     @TeacherId int,
     @FirstName nvarchar(32),

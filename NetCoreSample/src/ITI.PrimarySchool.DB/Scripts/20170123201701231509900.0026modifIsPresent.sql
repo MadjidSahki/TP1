@@ -1,0 +1,1 @@
+alter table iti.tTeacher alter column isPresent  int not null

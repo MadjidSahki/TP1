@@ -21,7 +21,7 @@ namespace ITI.PrimarySchool.DAL
         {
             using( SqlConnection con = new SqlConnection( _connectionString ) )
             {
-                return await con.QueryAsync<TeacherData>( @"select t.TeacherId, t.FirstName, t.LastName from iti.vTeacher t;" );
+                return await con.QueryAsync<TeacherData>( @"select t.TeacherId, t.FirstName, t.LastName, t.isPresent from iti.vTeacher t;" );
             }
         }
 
@@ -30,7 +30,7 @@ namespace ITI.PrimarySchool.DAL
             using( SqlConnection con = new SqlConnection( _connectionString ) )
             {
                 TeacherData teacher = await con.QueryFirstOrDefaultAsync<TeacherData>(
-                    @"select t.TeacherId, t.FirstName, t.LastName from iti.vTeacher t where t.TeacherId = @TeacherId;",
+                    @"select t.TeacherId, t.FirstName, t.LastName, t.isPresent from iti.vTeacher t where t.TeacherId = @TeacherId;",
                     new { TeacherId = teacherId } );
                 if( teacher == null ) return Result.Failure<TeacherData>( Status.NotFound, "Teacher not found." );
                 return Result.Success( teacher );
@@ -76,7 +76,7 @@ namespace ITI.PrimarySchool.DAL
             }
         }
 
-        public async Task<Result> Update( int teacherId, string firstName, string lastName )
+        public async Task<Result> Update( int teacherId, string firstName, string lastName, int isPresent )
         {
             if( !IsNameValid( firstName ) ) return Result.Failure( Status.BadRequest, "The first name is not valid." );
             if( !IsNameValid( lastName ) ) return Result.Failure( Status.BadRequest, "The last name is not valid." );
@@ -87,8 +87,9 @@ namespace ITI.PrimarySchool.DAL
                 p.Add( "@TeacherId", teacherId );
                 p.Add( "@FirstName", firstName );
                 p.Add( "@LastName", lastName );
+                p.Add( "@isPresent", isPresent);
                 p.Add( "@Status", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue );
-                await con.ExecuteAsync( "iti.sTeacherUpdate", p, commandType: CommandType.StoredProcedure );
+                await con.ExecuteAsync( "iti.sTeacherUpdate2", p, commandType: CommandType.StoredProcedure );
 
                 int status = p.Get<int>( "@Status" );
                 if( status == 1 ) return Result.Failure( Status.NotFound, "Teacher not found." );

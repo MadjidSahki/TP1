@@ -23,26 +23,33 @@
                 <label class="required">Prénom</label>
                 <input type="text" v-model="item.firstName" class="form-control" required>
             </div>
+            
+               Professeur absent : 
+               <input type="checkbox" name="my-checkbox" value="1" v-bind:true-value="1" v-bind:false-value="0" v-model="item.isPresent"><br>
 
             <button type="submit" class="btn btn-primary">Sauvegarder</button>
         </form>
+        
     </div>
 </template>
 
 <script>
+
     import { mapActions } from 'vuex'
     import TeacherApiService from '../../services/TeacherApiService'
-
+    
+    
     export default {
+        
         data () {
             return {
                 item: {},
                 mode: null,
                 id: null,
-                errors: []
+                errors: [],
             }
         },
-
+        
         async mounted() {
             this.mode = this.$route.params.mode;
             this.id = this.$route.params.id;
@@ -84,7 +91,8 @@
                     catch(error) {
                     }
                 }
-            }
+            },
+            
         }
     }
 </script>

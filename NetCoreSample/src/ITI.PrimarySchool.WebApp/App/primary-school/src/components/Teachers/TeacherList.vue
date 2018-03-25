@@ -14,7 +14,7 @@
                     <th>ID</th>
                     <th>Nom</th>
                     <th>Prénom</th>
-                    <th>Options</th>
+                    <th>Présence :</th>
                 </tr>
             </thead>
 
@@ -22,17 +22,20 @@
                 <tr v-if="teacherList.length == 0">
                     <td colspan="4" class="text-center">Il n'y a actuellement aucun professeur.</td>
                 </tr>
-
+                
                 <tr v-for="i of teacherList">
                     <td>{{ i.teacherId }}</td>
                     <td>{{ i.lastName }}</td>
                     <td>{{ i.firstName }}</td>
+                    <td>{{i.isPresent}}  </td>
                     <td>
                         <router-link :to="`teachers/edit/${i.teacherId}`"><i class="fa fa-pencil"></i></router-link>
                         <router-link :to="`teachers/assign/${i.teacherId}`"><i class="fa fa-link"></i></router-link>
                         <a href="#" @click="deleteTeacher(i.teacherId)"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
+                 <section>
+        </section>
             </tbody>
         </table>
     </div>
@@ -45,19 +48,22 @@
     export default {
         data() {
             return {
-                teacherList: []
+                teacherList: [],
+                presenceString: ''
             }
         },
 
         async mounted() {
-            await this.refreshList();
+           await this.refreshList();
         },
 
         methods: {
             ...mapActions(['executeAsyncRequestOrDefault', 'executeAsyncRequest']),
 
             async refreshList() {
+                
                 this.teacherList = (await this.executeAsyncRequestOrDefault(() => TeacherApiService.getTeacherListAsync())) || [];
+                
             },
 
             async deleteTeacher(teacherId) {

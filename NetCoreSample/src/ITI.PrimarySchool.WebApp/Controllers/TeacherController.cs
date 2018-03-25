@@ -39,7 +39,7 @@ namespace ITI.PrimarySchool.WebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateTeacher( [FromBody] TeacherViewModel model )
         {
-            Result<int> result = await _teacherGateway.Create( model.FirstName, model.LastName );
+            Result<int> result = await _teacherGateway.Create( model.FirstName, model.LastName);
             return this.CreateResult( result, o =>
             {
                 o.RouteName = "GetTeacher";
@@ -50,7 +50,7 @@ namespace ITI.PrimarySchool.WebApp.Controllers
         [HttpPut( "{id}" )]
         public async Task<IActionResult> UpdateTeacher( int id, [FromBody] TeacherViewModel model )
         {
-            Result result = await _teacherGateway.Update( id, model.FirstName, model.LastName );
+            Result result = await _teacherGateway.Update( id, model.FirstName, model.LastName, model.isPresent );
             return this.CreateResult( result );
         }
 

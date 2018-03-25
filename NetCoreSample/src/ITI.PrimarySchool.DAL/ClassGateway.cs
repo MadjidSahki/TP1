@@ -156,6 +156,20 @@ namespace ITI.PrimarySchool.DAL
 
         }
 
+        public async Task<IEnumerable<ClassData>> ConsultClass(int classId)
+        {
+            using(SqlConnection con = new SqlConnection(_connectionString))
+            {
+                return await con.QueryAsync<ClassData>(
+                    @"select s.FirstName,
+                        s.LastName, 
+                        s.TeacherFirstName, 
+                        s.TeacherLastName, 
+                        s.ClassId 
+                   from iti.vStudent s where s.ClassId = @ClassId;");
+            }
+        }
+
         bool IsNameValid( string name ) => !string.IsNullOrWhiteSpace( name );
 
         bool IsLevelValid( string level ) =>

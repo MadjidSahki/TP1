@@ -1,0 +1,1 @@
+alter table iti.tTeacher add isPresent BIT not null default (0)
