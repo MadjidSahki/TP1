@@ -2,8 +2,10 @@
     <div>
        <h1> Vue détaillée de la classe </h1><br>
        <div class="form-group">
-           <h3> Nom de la classe : {{item.name}} / niveau : {{item.level}}</h3><br>
-
+           <table class="table table-striped table-hover table-bordered">
+               <tr>Nom de la classe :  <h6>{{item.name}}</h6> </tr>
+               <tr>Niveau : <h6>{{item.level}}</h6></tr>
+            </table>
             <h4>Professeur en charge : </h4>
                <table class="table table-striped table-hover table-bordered">
                     <thead>
