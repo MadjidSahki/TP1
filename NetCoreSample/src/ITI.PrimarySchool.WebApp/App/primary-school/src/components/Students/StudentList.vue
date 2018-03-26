@@ -5,6 +5,8 @@
 
             <div>
                 <router-link class="btn btn-primary" :to="`students/create`"><i class="fa fa-plus"></i> Ajouter un élève</router-link>
+                <input type="text" v-model="searchQuery"/>
+                <button type="button" @click="search()">Search</button>
             </div>
         </div>
 
@@ -64,6 +66,15 @@
 
             async refreshList() {
                 this.studentList = (await this.executeAsyncRequestOrDefault(() => StudentApiService.getStudentListAsync())) || [];
+            },
+
+            async search() {
+                const data = this.searchQuery;
+                if(data == ""){
+                    this.studentList = (await this.executeAsyncRequestOrDefault(() => StudentApiService.getStudentListAsync())) || [];
+                } else {
+                this.studentList = (await this.executeAsyncRequestOrDefault(() => StudentApiService.studentResearch(data))) || [];
+                }
             },
 
             async deleteStudent(studentId) {

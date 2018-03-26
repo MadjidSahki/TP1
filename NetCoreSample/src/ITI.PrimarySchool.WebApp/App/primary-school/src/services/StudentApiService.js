@@ -34,6 +34,10 @@ class StudentApiService {
     async assignStudentToclassAsync(studentId, classId) {
         return await postAsync(`${endpoint}/${studentId}/assignClass`, { classId: classId });
     }
+
+    async studentResearch(model){
+        return await postAsync(`${endpoint}/search`,model);
+    }
 }
 
 export default new StudentApiService()

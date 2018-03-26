@@ -51,6 +51,20 @@ namespace ITI.PrimarySchool.DAL
                 return Result.Success( student );
             }
         }
+        public async Task<IEnumerable<StudentData>> studentSearch(string search)
+        {
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                return await con.QueryAsync<StudentData>(
+                    @"select s.* from iti.vstudent s
+                    left outer join iti.vstudent t 
+                    on t.StudentId = s.StudentId
+                    where s.FirstName like @search
+                    or t.LastName like @search;",
+                    new { search = search });
+            }
+        }
+
 
         public async Task<IEnumerable<StudentData>> StudentClass(int classId)
         {

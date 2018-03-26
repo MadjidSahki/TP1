@@ -61,6 +61,13 @@ namespace ITI.PrimarySchool.WebApp.Controllers
             return this.CreateResult( result );
         }
 
+        [HttpPost("search")]
+        public async Task<IActionResult> SearchStudentByName([FromBody] string search)
+        {
+            var result = await _studentGateway.studentSearch(search);
+            return Ok(result);
+        }
+
         [HttpPost("{id}/assignClass")]
         public async Task<IActionResult> AssignClass(int id, [FromBody] AssignedClassViewModels model)
         {
