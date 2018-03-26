@@ -27,7 +27,10 @@
                     <td>{{ i.teacherId }}</td>
                     <td>{{ i.lastName }}</td>
                     <td>{{ i.firstName }}</td>
-                    <td>{{i.isPresent}}  </td>
+                    <td v-if="i.isPresent == 0"> 
+                        Absent </td>
+                    <td v-else-if="i.isPresent == 1">
+                        Présent </td>
                     <td>
                         <router-link :to="`teachers/edit/${i.teacherId}`"><i class="fa fa-pencil"></i></router-link>
                         <router-link :to="`teachers/assign/${i.teacherId}`"><i class="fa fa-link"></i></router-link>
