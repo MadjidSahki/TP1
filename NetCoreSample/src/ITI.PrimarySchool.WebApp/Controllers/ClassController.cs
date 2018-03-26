@@ -14,10 +14,19 @@ namespace ITI.PrimarySchool.WebApp.Controllers
     public class ClassController : Controller
     {
         readonly ClassGateway _classGateway;
+      //  readonly StudentGateway _studentGateway;
 
         public ClassController( ClassGateway classGateway )
         {
             _classGateway = classGateway;
+        }
+
+        [HttpGet("view/{id}")]
+        public async Task<IActionResult> ViewStudentClass(int id)
+        {
+            IEnumerable < StudentData > result = await _classGateway.StudentClass(id);
+            return Ok(result);
+
         }
 
         [HttpGet]
@@ -31,6 +40,8 @@ namespace ITI.PrimarySchool.WebApp.Controllers
         public async Task<IActionResult> GetClassById( int id )
         {
             Result<ClassData> result = await _classGateway.FindById( id );
+            IEnumerable<StudentData> resultStudents = await _classGateway.StudentClass(id);
+            result.Content.Students = resultStudents;
             return this.CreateResult( result );
         }
 
@@ -44,6 +55,7 @@ namespace ITI.PrimarySchool.WebApp.Controllers
                 o.RouteValues = id => new { id };
             } );
         }
+
 
         [HttpPut( "{id}" )]
         public async Task<IActionResult> UpdateClass( int id, [FromBody] ClassViewModel model )

@@ -27,6 +27,20 @@ namespace ITI.PrimarySchool.DAL
                       from iti.vClass c;" );
             }
         }
+        public async Task<IEnumerable<StudentData>> StudentClass(int classId)
+        {
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                return await con.QueryAsync<StudentData>(
+                      @"select s.StudentId, 
+                             s.FirstName, 
+                             s.LastName, 
+                             s.ClassId
+                    from iti.vStudent s 
+                    where s.ClassId = @ClassId ",
+                    new { ClassId = classId });
+            }
+        }
 
         public async Task<Result<ClassData>> FindById( int classId )
         {
@@ -38,7 +52,7 @@ namespace ITI.PrimarySchool.DAL
                              c.[Level],
                              c.TeacherId,
                              c.TeacherLastName,
-                             c.TeacherLastName
+                             c.TeacherFirstName
                         from iti.vClass c
                         where c.ClassId = @ClassId;",
                     new { ClassId = classId } );
@@ -154,20 +168,6 @@ namespace ITI.PrimarySchool.DAL
                 return Result.Success(classData);
             }
 
-        }
-
-        public async Task<IEnumerable<ClassData>> ConsultClass(int classId)
-        {
-            using(SqlConnection con = new SqlConnection(_connectionString))
-            {
-                return await con.QueryAsync<ClassData>(
-                    @"select s.FirstName,
-                        s.LastName, 
-                        s.TeacherFirstName, 
-                        s.TeacherLastName, 
-                        s.ClassId 
-                   from iti.vStudent s where s.ClassId = @ClassId;");
-            }
         }
 
         bool IsNameValid( string name ) => !string.IsNullOrWhiteSpace( name );

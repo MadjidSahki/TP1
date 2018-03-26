@@ -64,7 +64,7 @@ namespace ITI.PrimarySchool.WebApp.Controllers
         [HttpPost( "{id}/assignClass" )]
         public async Task<IActionResult> AssignClass( int id, [FromBody] AssignClassViewModel model )
         {
-            Result result = await _teacherGateway.AssignClass( id, model.ClassId );
+            Result result = await _teacherGateway.AssignClass( id, model.ClassId);
             return this.CreateResult( result );
         }
 

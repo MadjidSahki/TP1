@@ -52,6 +52,20 @@ namespace ITI.PrimarySchool.DAL
             }
         }
 
+        public async Task<IEnumerable<StudentData>> StudentClass(int classId)
+        {
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+              return await con.QueryAsync<StudentData>(
+                    @"select s.StudentId, 
+                             s.FirstName, 
+                             s.LastName, 
+                             s.ClassId
+                    from iti.vStudent s 
+                    where s.ClassId = @ClassId ");
+            }
+        }
+
         public async Task<Result<StudentClassData>> FindStudentClassById( int studentId )
         {
             using( SqlConnection con = new SqlConnection( _connectionString ) )

@@ -16,7 +16,6 @@
                     <th>Nom</th>
                     <th>Niveau</th>
                     <th>Options</th>
-                    <th>Vue détaillée</th>
                 </tr>
             </thead>
 
@@ -36,9 +35,8 @@
                         <a href="#" @click="deleteClass(i.classId)">
                             <i class="fa fa-trash"></i>
                         </a>
-                    </td>
-                    <td>
-                         <router-link :to="`classes/view/${i.classId}`"><i class="fa fa-pencil"></i></router-link>
+
+                         <router-link :to="`classes/view/${i.classId}`"><i class="fa fa-list"></i></router-link>
                     </td>
                 </tr>
             </tbody>
